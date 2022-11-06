@@ -9,13 +9,16 @@ num_user_str = input("Digite o seu numero: ")
 print("Você digitou o número ", num_user_str, end="\n\n")
 
 num_user = int(num_user_str)
+acertou = numero_secreto == num_user
+maior = num_user > numero_secreto
+menor = num_user < numero_secreto
 
-if(numero_secreto == num_user):
-    print("Você acertou!")
+if acertou :
+    print("Parabéns, você acertou!")
 else:
-    if(num_user > numero_secreto):
+    if(maior):
         print("Seu chute foi maior que o número secreto")
-    elif(num_user < numero_secreto):
+    elif(menor):
         print("Seu chute foi menor que o número secreto")
     print("Você errou!")
 
